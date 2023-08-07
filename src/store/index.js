@@ -2,13 +2,28 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
+    tasks: []
   },
-  getters: {
-  },
+ 
   mutations: {
+    SET_TASKS (state, payload){
+      state.tasks = payload
+    },
+   
   },
   actions: {
+    addTask({commit,state}, task){
+      let newArr = [];
+      newArr= state.tasks;
+      newArr.push(task);
+      commit('SET_TASKS', newArr)
+    },
+   
+  
   },
-  modules: {
+   getters: {
+    getTasks(state){
+      return state.tasks
+    }
   }
 })
