@@ -1,14 +1,7 @@
 <template>
-    <div>
+    <div >
 
-
-       
-   
-
-
-
-
-        <form class="flex flex-col justify-center items-center" @submit.prevent="submitTask">
+        <form class="flex flex-col justify-center items-center " @submit.prevent="submitTask">
             <label for="title">Title:</label>
             <input class="p-2 rounded-full bg-gray-200" type="text" v-model="title" required >
             <label for="description">Description:</label>

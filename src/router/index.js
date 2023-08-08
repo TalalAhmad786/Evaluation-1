@@ -14,7 +14,20 @@ const routes = [
   },
   {
     path: '/home',
-    component: HomeView
+    component: HomeView,
+    children: [
+      {
+
+        path: '/home/load',
+        component: TaskList,
+
+      },
+      {
+        path: '/home/task',
+        component: TaskAdd
+      }
+
+    ]
   },
   {
     path: '/signup',

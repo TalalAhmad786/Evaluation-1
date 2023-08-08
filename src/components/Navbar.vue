@@ -17,10 +17,10 @@ name: 'NavbarView',
 methods:
 {
     showData(){
-        router.push('load')
+        router.push('/home/load')
     },
     addData(){
-        router.push('task')
+        router.push('/home/task')
     }
 }
 }
